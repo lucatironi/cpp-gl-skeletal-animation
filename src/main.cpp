@@ -133,7 +133,7 @@ static void ProcessInput(GLFWwindow* window)
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
 
-     if (glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS && !animationChanged)
+    if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS && !animationChanged)
     {
         if (currentAnimation < model.GetNumAnimations() - 1)
             currentAnimation++;
@@ -142,7 +142,7 @@ static void ProcessInput(GLFWwindow* window)
         model.SetAnimation(currentAnimation);
         animationChanged = true;
     }
-    if (glfwGetKey(window, GLFW_KEY_1) == GLFW_RELEASE)
+    if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_RELEASE)
         animationChanged = false;
 }
 
